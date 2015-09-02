@@ -36,6 +36,8 @@ type network struct {
 }
 
 func (d *driver) CreateNetwork(id string, option map[string]interface{}) error {
+	logrus.Debugf("create network call recieved at overlay driver")
+	logrus.WarnF("create network call recieved at overlay driver")
 	if id == "" {
 		return fmt.Errorf("invalid network id")
 	}
