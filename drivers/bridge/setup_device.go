@@ -46,6 +46,7 @@ func setupDevice(config *networkConfiguration, i *bridgeInterface) error {
 			return fmt.Errorf("failed to set bridge mac-address %s : %s", hwAddr, err.Error())
 		}
 		logrus.Debugf("Setting bridge mac address to %s", hwAddr)
+		logrus.Debugf("call recieved to bridge driver, PLUMgrid")
 	}
 	return err
 }
